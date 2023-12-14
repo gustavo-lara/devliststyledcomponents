@@ -1,4 +1,4 @@
-import "./App.css"
+
 import * as C from "./App.js";
 
 import CompletedTasks from "./components/CompletedTasks/CompletedTasks"
