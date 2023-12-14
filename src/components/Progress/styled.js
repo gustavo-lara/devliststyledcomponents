@@ -1,14 +1,13 @@
-/* .container {
+import styled from "styled-components";
+
+export const Container = styled.div`
   max-width: 520px;
   grid-column: 2;
   grid-row: 1;
   align-self: end;
   overflow: hidden;
-}
-
-
-.container::after {
-  content: "";
+  &:after{
+    content: "";
   display: block;
   width: 100%;
   height: 1px;
@@ -16,67 +15,37 @@
   margin: 24px 0;
 }
 
-
 @media (max-width: 768px) {
-  .container {
-    max-width: 100%;
-    grid-column: 1;
-    grid-row: 3;
-  }
+  max-width: 100%;
+  grid-column: 1;
+  grid-row: 3;
 }
+`
 
-
-.progressBar {
-  width: 100%;
-  height: 4px;
-  background: #282e4f;
-  border-radius: 2px;
-}
-
-
-.progressBarFill {
+export const Input = styled.input`
   width: 100%;
   height: 4px;
   border-radius: 2px;
   accent-color: #fb40df;
   box-shadow: 0px 0px 12px 4px rgba(251, 64, 229, 0.25);
   transition: 0.8s;
-}
+`
 
-
-.progressBarValues {
+export const Bar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 8px;
-  
-}
 
-
-.progressBarValues>span {
-  font-family: "Roboto";
+  span{  font-family: "Roboto";
   font-size: 1rem;
   line-height: 150%;
   font-weight: 400;
   color: #fff;
-  font-family: "Montserrat";
-}
+  font-family: "Montserrat";}
+`
 
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -32px, 0);
-  }
-
-  to {
-    opacity: initial;
-    transform: initial;
-  }
-}
-
-
-.taskCompletedMessage {
+export const Message = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
@@ -88,14 +57,13 @@
   height: 80px;
   margin: 24px auto 32px;
   animation: fadeInDown 0.8s;
-}
-
-
-.taskCompletedMessage>span {
-  font-family: "Roboto";
+  span{
+    font-family: "Roboto";
   font-size: 1rem;
   line-height: 150%;
   font-weight: 700;
   color: #fff;
   font-family: "Montserrat";
-} */
+  }
+
+`

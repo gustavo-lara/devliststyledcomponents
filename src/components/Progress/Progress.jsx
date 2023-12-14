@@ -1,32 +1,33 @@
 import { useContext } from "react";
+import * as C from "./styled.js";
+
 import Title from "../Title/Title";
-import styles from "./Progress.module.css";
 import { AppContext } from "../../AppContent";
 import imgUrl from "../../assets/img-trophy-min.png";
 
 const Progress = () => {
   const { progressBarValue } = useContext(AppContext);
   return (
-    <div className={styles.container}>
+    <C.Container>
       <Title iconName={"chart"} text={"Progresso"} />
-      <input
-        className={styles.progressBarFill}
+      <C.Input
         readOnly
         type="range"
-        value={progressBarValue}
-      />
-      <div className={styles.progressBarValues}>
+        value={progressBarValue} />
+
+      <C.Bar>
         <span>0%</span>
         <span>50%</span>
         <span>100%</span>
-      </div>
+      </C.Bar>
+
       {progressBarValue === 100 && (
-        <div className={styles.taskCompletedMessage}>
+        <C.Message>
           <img src={imgUrl} alt="Troféu" width="40" height="40" />
           <span>Parabéns! Você completou todas as tarefas de hoje!</span>
-        </div>
+        </C.Message>
       )}
-    </div>
+    </C.Container>
   );
 };
 
