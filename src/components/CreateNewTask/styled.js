@@ -1,10 +1,12 @@
-/* .container {
-  max-width: 520px;
+import styled from "styled-components";
+
+export const Container = styled.div`
+max-width: 520px;
   grid-column: 1;
   grid-row: 1;
-}
 
-.container::after {
+
+&:after {
   content: "";
   display: block;
   width: 100%;
@@ -14,17 +16,18 @@
 }
 
 @media (max-width: 768px) {
-  .container {
     max-width: 100%;
-  }
 }
 
-.inputContainer {
-  display: flex;
-}
+`
 
-.inputText {
-  flex: 1;
+export const InputContainer = styled.form`
+display: flex;
+
+`
+
+export const InputText = styled.input`
+ flex: 1;
   height: 56px;
   background: #151a37;
   border: 1px solid #24293f;
@@ -39,15 +42,14 @@
   line-height: 150%;
   font-weight: 400;
   color: #fff;
+  
+    &:hover,
+    &:focus {
+    border-color: #7a38fe;
 }
+`
 
-
-.inputText:hover,
-.inputText:focus {
-  border-color: #7a38fe;
-}
-
-.addButton{
+export const AddButton = styled.button`
 width: 56px;
 height: 56px;
 background: #7a38fe;
@@ -56,8 +58,9 @@ transition: 0.2s;
 display: flex;
 justify-content: center;
 align-items: center;
-}
 
-.addButton:hover{
+
+&:hover{
     background: #5e21d8;
-} */
+}
+`

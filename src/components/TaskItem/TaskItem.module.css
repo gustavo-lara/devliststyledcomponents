@@ -1,4 +1,4 @@
-@keyframes fadeInDown {
+/* @keyframes fadeInDown {
     from {
       opacity: 0;
       transform: translate3d(0, -32px, 0);
@@ -103,4 +103,4 @@
   .trashButton:focus > svg > path {
     fill: #ff334c;
   }
-  
+   */
